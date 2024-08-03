@@ -44,3 +44,29 @@ csr.json  sample.com.csr  sample.com-key.pem  sample.com.pem
 ```sh
 openssl x509 -in example.com/example.com.pem -text
 ```
+
+在 Nginx 中使用
+
+```nginx
+server {
+  listen 443 ssl;
+
+  server_name example.com;
+
+  ssl_certificate /etc/nginx/certs/example.com.pem;
+  ssl_certificate_key /etc/nginx/certs/example.com-key.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers HIGH:!aNULL:!MD5;
+
+  location / {
+    default_type text/html;
+    return 200 'ok';
+  }
+}
+```
+
+验证证书
+
+```sh
+curl --cacert ca/ca.pem https://example.com
+```
