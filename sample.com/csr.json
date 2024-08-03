@@ -1,0 +1,18 @@
+{
+    "CN": "sample.com",
+    "hosts": [
+        "sample.com"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C":  "CN",
+            "L":  "Shenzhen",
+            "O":  "aisuhua.github.io",
+            "OU": "System"
+        }
+    ]
+}
