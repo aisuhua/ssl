@@ -1,0 +1,18 @@
+{
+    "CA": {
+        "expiry": "876000h"
+    }, 
+    "CN": "suhua is a good boy",
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C":  "CN",
+            "L":  "Shenzhen",
+            "O":  "aisuhua.github.io",
+            "OU": "System"
+        }
+    ]
+}
